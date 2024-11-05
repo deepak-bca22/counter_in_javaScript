@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter in javaScript</title>
+    <style>
+    body{
+        background:aquamarine;
+    }
+    .counter{
+        height: 150px;
+        width: 190px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9px;
+        background: rgb(80, 79, 79);
+        box-shadow: 2px 2px 6px 5px rgb(75, 151, 201);
+        margin-left: 400px;
+        margin-top: 200px;
+        gap: 6px;
+    }
+    .counter button{
+        height: 30px;
+        background: aqua;
+        width: 90px;
+        text-align: center;
+    }
+    .counter p{
+        height: 30px;
+        width: 30px;
+        background: aquamarine;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 24px;
+        margin-top: -3px;
+        box-shadow: 0px 0px 2px 5px rgb(75, 151, 201);
+
+    }
+
+    </style>
+</head>
+<body>
+    <div class="counter">
+    <p></p>
+    <button onclick="inc()">increament</button>
+    <button onclick="dec()">decreament</button>
+    </div>
+</body>
+
+<script>
+    count = 0;
+    const para = document.querySelector('p');
+    para.innerText=count;
+    const inc = ()=>{
+       count=count+1;
+       para.innerText=count;
+    }
+    const dec = ()=>{
+        if(count>0){
+        count=count-1;
+        para.innerText=count;
+        }else{
+            count=0;
+            para.innerText=count;
+        }
+     }
+</script>
+</html>
